@@ -27,5 +27,5 @@ In order to see the website you just need to open the `index.html` file in your 
 
 * [favicon image](https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-512.png)
 * **fontawesome** for all the logos.
-* **Brad Traversy videos** on [Weight Converter](https://www.youtube.com/watch?v=7l-ZAuU8TXc) and [Animated Icons](https://www.youtube.com/watch?v=XP-MRCUPZao). 
+* **Brad Traversy** videos on [Weight Converter](https://www.youtube.com/watch?v=7l-ZAuU8TXc) and [Animated Icons](https://www.youtube.com/watch?v=XP-MRCUPZao). 
 * Hat tip to anyone who's code was used.
