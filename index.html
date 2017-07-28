@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="css/main1.css">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+    <title>Ankush Sankhe | Converter</title>
+    <title>Converter</title>
+  </head>
+  <body>
+
+    <div class="col-md-6 offset-md-3">
+        <h1 class="display-4 text-center mb-3">Converter</h1>
+     </div>
+    <div class="container">
+      <ul class="nav nav-tabs nav-justified" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" href="#profile" role="tab" data-toggle="tab">Temperature</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#buzz" role="tab" data-toggle="tab">Weight</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#references" role="tab" data-toggle="tab">Height</a>
+        </li>
+      </ul>
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane in active" id="profile">
+            <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+         <h1 class="display-4 text-center mb-4 app-title">What's The Temperature? <span id="temp" class="fa"></span></h1>
+        <form>
+          <div class="form-group">
+            <input
+            id="celInput"
+            type="number"
+            class="form-control form-control-lg" placeholder="Enter Temperature in degree Celsius..."
+            >
+          </div>
+        </form>
+        <div id="output">
+          <div class="card card-primary mb-2">
+            <div class="card-block">
+              <h4>Kelvin:</h4>
+              <div id="kelvinOutput"></div>
+            </div>
+          </div>
+
+          <div class="card card-success mb-2">
+            <div class="card-block">
+              <h4>Fahrenheit:</h4>
+              <div id="fahOutput"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+        </div>
+        <div role="tabpanel" class="tab-pane fade" id="buzz">
+              <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h1 class="display-4 text-center mb-3  app-title">What's your weight?</h1>
+        <form>
+          <div class="form-group">
+            <input
+            id="lbsInput"
+            type="number"
+            class="form-control form-control-lg" placeholder="Enter weight in Pounds..."
+            >
+          </div>
+        </form>
+        <div id="outputw">
+          <div class="card card-primary mb-2">
+            <div class="card-block">
+              <h4>Grams:</h4>
+              <div id="gramsOutput"></div>
+            </div>
+          </div>
+
+          <div class="card card-success mb-2">
+            <div class="card-block">
+              <h4>Kilograms:</h4>
+              <div id="kgOutput"></div>
+            </div>
+          </div>
+
+          <div class="card card-danger mb-2">
+            <div class="card-block">
+              <h4>Ounces:</h4>
+              <div id="ozOutput"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+        </div>
+        <div role="tabpanel" class="tab-pane fade" id="references">
+            <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h1 class="display-4 text-center mb-3 app-title">What's your height?</h1>
+        <form>
+          <div class="form-group">
+            <input
+            id="feetInput"
+            type="number"
+            class="form-control form-control-lg" placeholder="Enter Height in feet..."
+            >
+          </div>
+        </form>
+        <div id="outputh">
+          <div class="card card-primary mb-2">
+            <div class="card-block">
+              <h4>Centimeter:</h4>
+              <div id="cmOutput"></div>
+            </div>
+          </div>
+
+          <div class="card card-success mb-2">
+            <div class="card-block">
+              <h4>Meter:</h4>
+              <div id="mOutput"></div>
+            </div>
+          </div>
+
+          <div class="card card-danger mb-2">
+            <div class="card-block">
+              <h4>Inch:</h4>
+              <div id="incOutput"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+          <p>Copyright © 2017 <a href="https://virtuosars.github.io/ArsS/">Ankush Sankhe</a></p>
+      </div>
+    </footer>
+
+
+  <script type="text/javascript">
+  // Animated Thermometer
+
+function tempLoad () {
+  let temp = document.getElementById('temp');
+  temp.innerHTML = "&#xf2cb;";
+
+  setTimeout(function(){
+    temp.innerHTML = "&#xf2ca;";
+  }, 1000);
+  setTimeout(function(){
+    temp.innerHTML = "&#xf2c9;";
+  }, 2000);
+  setTimeout(function(){
+    temp.innerHTML = "&#xf2c8;";
+  }, 3000);
+  setTimeout(function(){
+    temp.innerHTML = "&#xf2c7;";
+  }, 4000);
+
+}
+
+tempLoad();
+
+setInterval(tempLoad, 5000);
+
+document.getElementById('output').style.visibility = 'hidden';
+    document.getElementById('celInput').addEventListener('input', function(e){
+      document.getElementById('output').style.visibility = 'visible';
+      let cel = e.target.value;
+      document.getElementById('kelvinOutput').innerHTML = cel * 1 + 273.15;
+      document.getElementById('fahOutput').innerHTML = cel * 1.8 + 32;
+    });
+
+</script>
+
+<script>
+    document.getElementById('outputw').style.visibility = 'hidden';
+    document.getElementById('lbsInput').addEventListener('input', function(e){
+      document.getElementById('outputw').style.visibility = 'visible';
+      let lbs = e.target.value;
+      document.getElementById('gramsOutput').innerHTML = lbs * 453.59237;
+      document.getElementById('kgOutput').innerHTML = lbs * 0.45359237;
+      document.getElementById('ozOutput').innerHTML = lbs * 16;
+    });
+</script>
+
+<script>
+    document.getElementById('outputh').style.visibility = 'hidden';
+    document.getElementById('feetInput').addEventListener('input', function(e){
+      document.getElementById('outputh').style.visibility = 'visible';
+      let feet = e.target.value;
+      document.getElementById('cmOutput').innerHTML = feet * 30.48;
+      document.getElementById('mOutput').innerHTML = feet * 0.3048;
+      document.getElementById('incOutput').innerHTML = feet * 12;
+    });
+</script>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+body{
+      margin-top:70px;
+      background:#333;
+      color:#fff;
+    }
+
+.app-title {
+  padding: 30px;
+  color: #fff;
+}
+
+footer {
+  text-align: center;
+}
