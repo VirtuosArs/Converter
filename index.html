@@ -79,7 +79,7 @@
             <input
             id="lbsInput"
             type="number"
-            class="form-control form-control-lg" placeholder="Enter weight in Pounds..."
+            class="form-control form-control-lg" placeholder="Enter weight in Kilograms..."
             >
           </div>
         </form>
@@ -93,8 +93,8 @@
 
           <div class="card card-success mb-2">
             <div class="card-block">
-              <h4>Kilograms:</h4>
-              <div id="kgOutput"></div>
+              <h4>Pounds:</h4>
+              <div id="poundOutput"></div>
             </div>
           </div>
 
@@ -201,9 +201,9 @@ document.getElementById('output').style.visibility = 'hidden';
     document.getElementById('lbsInput').addEventListener('input', function(e){
       document.getElementById('outputw').style.visibility = 'visible';
       let lbs = e.target.value;
-      document.getElementById('gramsOutput').innerHTML = lbs * 453.59237;
-      document.getElementById('kgOutput').innerHTML = lbs * 0.45359237;
-      document.getElementById('ozOutput').innerHTML = lbs * 16;
+      document.getElementById('gramsOutput').innerHTML = lbs * 1000;
+      document.getElementById('poundOutput').innerHTML = lbs * 2.20462;
+      document.getElementById('ozOutput').innerHTML = lbs * 35.274;
     });
 </script>
 
