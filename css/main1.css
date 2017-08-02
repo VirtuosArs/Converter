@@ -1,12 +1,17 @@
 body{
       margin-top:70px;
-      background:#333;
-      color:#fff;
+      background:white;
+      color:black;
     }
 
 .app-title {
   padding: 30px;
-  color: #fff;
+  color: black;
+}
+
+.heading {
+	font-family: myFirstFont;
+    src: url(sansation_light.woff);
 }
 
 footer {
